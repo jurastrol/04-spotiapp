@@ -42,6 +42,7 @@ export class SpotifyService {
   getTopTracks(id: string) {
 
     return this.getQuery(`artists/${id}/top-tracks?country=es`)
+              // tslint:disable-next-line: no-string-literal
               .pipe( map( data => data['tracks']));
 
   }
